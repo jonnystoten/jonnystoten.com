@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jonnystoten
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jonnystoten.com
+  * I am jonnystoten (https://keybase.io/jonnystoten) on keybase.
+  * I have a public key ASAB_qgI1n3knDCUMccX8n7QD5JMJfX1KTW4r1z6ifzKkwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012001fea808d67de49c309431c717f27ed00f924c25f5f52935b8af5cfa89fcca930a",
+            "host": "keybase.io",
+            "kid": "012001fea808d67de49c309431c717f27ed00f924c25f5f52935b8af5cfa89fcca930a",
+            "uid": "064e8623c61fbdcef719e88916695e00",
+            "username": "jonnystoten"
+        },
+        "service": {
+            "hostname": "jonnystoten.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1489797332,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1489797129,
+        "hash": "471107a8664ca0a7d959a0832d03800d1f4186b2694dfe66b37b29d77dfb1fd03972e9f1257ca2d0ecc67a39650685c2d83f60aa0f56cf94c7329033cf5a1d5e",
+        "seqno": 965375
+    },
+    "prev": "0b07756a58d9d6ce8f41853f4d868bf33cc9206eb93740ff902d81341db17014",
+    "seqno": 20,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgAf6oCNZ95JwwlDHHF/J+0A+STCX19Sk1uK9c+on8ypMKp3BheWxvYWTFAvt7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMDFmZWE4MDhkNjdkZTQ5YzMwOTQzMWM3MTdmMjdlZDAwZjkyNGMyNWY1ZjUyOTM1YjhhZjVjZmE4OWZjY2E5MzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMDFmZWE4MDhkNjdkZTQ5YzMwOTQzMWM3MTdmMjdlZDAwZjkyNGMyNWY1ZjUyOTM1YjhhZjVjZmE4OWZjY2E5MzBhIiwidWlkIjoiMDY0ZTg2MjNjNjFmYmRjZWY3MTllODg5MTY2OTVlMDAiLCJ1c2VybmFtZSI6Impvbm55c3RvdGVuIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJqb25ueXN0b3Rlbi5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMCJ9LCJjdGltZSI6MTQ4OTc5NzMzMiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDg5Nzk3MTI5LCJoYXNoIjoiNDcxMTA3YTg2NjRjYTBhN2Q5NTlhMDgzMmQwMzgwMGQxZjQxODZiMjY5NGRmZTY2YjM3YjI5ZDc3ZGZiMWZkMDM5NzJlOWYxMjU3Y2EyZDBlY2M2N2EzOTY1MDY4NWMyZDgzZjYwYWEwZjU2Y2Y5NGM3MzI5MDMzY2Y1YTFkNWUiLCJzZXFubyI6OTY1Mzc1fSwicHJldiI6IjBiMDc3NTZhNThkOWQ2Y2U4ZjQxODUzZjRkODY4YmYzM2NjOTIwNmViOTM3NDBmZjkwMmQ4MTM0MWRiMTcwMTQiLCJzZXFubyI6MjAsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RADVLDKWDsJgVLbtpNgZVBbR2qxVgIxA/GcoTSivaZzSG4wBbpRyoiLzLvyoGC0Br1Zk5jM4qiyG2Lh6nbnpWxCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEII1/nODrDlWxgGL0SA8XwHlnFUmIgf6/a7SsR6TGzGc0o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jonnystoten
+
+==================================================================
