@@ -1,13 +1,14 @@
 import React from "react";
 import g from "glamorous";
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone, faGlobe, faMapMarker } from '@fortawesome/fontawesome-free-solid'
+import FontAwesome from 'react-fontawesome'
 
 import { Experience } from "../components/experience"
 import { MarkdownHtml } from "../components/markdown-html"
 import { Education } from "../components/education";
 import { Skills } from "../components/skills";
 import { mediaQueries } from "../utils/media-queries";
+import { PrintOnly } from "../utils/print-only";
+import { PrintPageBreak } from "../utils/print-page-break";
 
 const Profile = g.div({
   display: "flex",
@@ -32,10 +33,10 @@ export default ({ data }) => (
         <p>{data.me.description}</p>
       </g.Div>
       <ContactData>
-        <p><a href={`mailto:${data.me.email}`}>{data.me.email}</a> <FontAwesomeIcon icon={faEnvelope} /></p>
-        <p><a href={`tel:${data.me.phone}`}>{data.me.phone}</a> <FontAwesomeIcon icon={faPhone} /></p>
-        <p><a href={data.me.website}>{data.me.website}</a> <FontAwesomeIcon icon={faGlobe} /></p>
-        <p><a href="https://goo.gl/maps/JRFMPfXhrMM2">{data.me.address}</a> <FontAwesomeIcon icon={faMapMarker} /></p>
+        <p><a href={`mailto:${data.me.email}`}>{data.me.email}</a> <FontAwesome name="envelope" fixedWidth /></p>
+        <p><a href={`tel:${data.me.phone}`}>{data.me.phone}</a> <FontAwesome name="phone" fixedWidth /></p>
+        <p><a href={data.me.website}>{data.me.website}</a> <FontAwesome name="globe" fixedWidth /></p>
+        <p><a href="https://goo.gl/maps/JRFMPfXhrMM2">{data.me.address}</a> <FontAwesome name="map-marker" fixedWidth /></p>
       </ContactData>
     </Profile>
     <hr />
@@ -43,9 +44,14 @@ export default ({ data }) => (
     <hr />
     <Experience data={data.experience} />
     <hr />
+    <PrintPageBreak />
     <Skills data={data.skills} />
     <hr />
     <Education data={data.education} />
+    <PrintOnly>
+      <hr />
+      An up-to-date version of this CV is always available at https://jonnystoten.com/cv
+    </PrintOnly>
   </div>
 );
 
