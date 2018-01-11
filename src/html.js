@@ -23,7 +23,7 @@ module.exports = class HTML extends React.Component {
       )
     }
     return (
-      <html {...this.props.htmlAttributes}>
+      <html lang="en" {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -31,6 +31,7 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <title>Jonny Stoten, Senior Software Engineer</title>
           <script src="https://use.fontawesome.com/9c410943c1.js" async></script>
           {this.props.headComponents}
           {css}
