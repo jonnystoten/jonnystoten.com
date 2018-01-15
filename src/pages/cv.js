@@ -11,33 +11,68 @@ import { PrintOnly } from "../utils/print-only";
 import { PrintPageBreak } from "../utils/print-page-break";
 
 const Profile = g.div({
-  display: "flex",
-  justifyContent: "flex-end",
-  [mediaQueries.phone]: {
-    display: "initial"
+  [mediaQueries.supportsGrid]: {
+    display: "grid",
+    gridTemplateAreas: `
+      "name contact"
+      "social contact"
+    `,
+    [mediaQueries.phone]: {
+      gridTemplateAreas: `
+        "name"
+        "contact"
+        "social"
+      `,
+    }
+  },
+})
+
+const Name = g.div({
+  [mediaQueries.supportsGrid]: {
+    gridArea: "name"
   }
 })
 
 const ContactData = g.div({
   textAlign: "right",
+  [mediaQueries.supportsGrid]: {
+    gridArea: "contact"
+  },
   // [mediaQueries.phone]: {
   //   textAlign: "initial"
   // }
 })
 
+const Social = g.div({
+  [mediaQueries.supportsGrid]: {
+    gridArea: "social"
+  },
+  paddingBottom: "1rem"
+})
+
+const SocialLink = g.a({
+  fontSize: "2rem",
+  padding: "0 1rem"
+})
+
 export default ({ data }) => (
   <div>
     <Profile>
-      <g.Div flex="1">
+      <Name>
         <h1>{data.me.name}</h1>
         <p>{data.me.description}</p>
-      </g.Div>
+      </Name>
       <ContactData>
         <p><a href={`mailto:${data.me.email}`}>{data.me.email}</a> <FontAwesome name="envelope" fixedWidth /></p>
         <p><a href={`tel:${data.me.phone}`}>{data.me.phone}</a> <FontAwesome name="phone" fixedWidth /></p>
         <p><a href={data.me.website}>{data.me.website}</a> <FontAwesome name="globe" fixedWidth /></p>
         <p><a href="https://goo.gl/maps/JRFMPfXhrMM2">{data.me.address}</a> <FontAwesome name="map-marker" fixedWidth /></p>
       </ContactData>
+      <Social>
+        {data.me.profiles.map(p => (
+          <SocialLink href={p.url} title={p.network}><FontAwesome name={p.icon} /></SocialLink>
+        ))}
+      </Social>
     </Profile>
     <hr />
     <MarkdownHtml markdown={data.me.summary} />
@@ -72,6 +107,7 @@ export const query = graphql`
         network
         username
         url
+        icon
       }
       summary {
         childMarkdownRemark {
