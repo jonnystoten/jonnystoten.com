@@ -44,6 +44,9 @@ const ContactData = g.div({
 })
 
 const Social = g.div({
+  [mediaQueries.print]: {
+    display: "none"
+  },
   [mediaQueries.supportsGrid]: {
     gridArea: "social"
   },
