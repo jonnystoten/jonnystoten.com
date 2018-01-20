@@ -5,7 +5,12 @@ module.exports = {
     title: `Pandas Eating Lots`
   },
   plugins: [
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-smartypants`],
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
