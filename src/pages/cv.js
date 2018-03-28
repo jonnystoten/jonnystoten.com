@@ -139,7 +139,7 @@ export const query = graphql`
         }
       }
     }
-    education: allContentfulQualification {
+    education: allContentfulQualification(sort: {fields: [startDate], order: DESC}) {
       edges {
         node {
           level
