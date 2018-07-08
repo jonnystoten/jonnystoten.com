@@ -14,7 +14,7 @@ export const Experience = ({ data }) => (
         </p>
         <MarkdownHtml markdown={node.summary} />
         {node.projects && <div>
-          <p>My projects at {node.company} have included:</p>
+          <p>My projects at {node.company} {node.endDate ? "included" : "have included"}:</p>
           <MarkdownHtml markdown={node.projects} />
         </div>}
       </div>
