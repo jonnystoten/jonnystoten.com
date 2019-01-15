@@ -1,9 +1,9 @@
 import React from "react";
 import g from "glamorous";
-import FontAwesome from 'react-fontawesome'
+import FontAwesome from "react-fontawesome";
 
-import { Experience } from "../components/experience"
-import { MarkdownHtml } from "../components/markdown-html"
+import { Experience } from "../components/experience";
+import { MarkdownHtml } from "../components/markdown-html";
 import { Education } from "../components/education";
 import { Skills } from "../components/skills";
 import { mediaQueries } from "../utils/media-queries";
@@ -23,40 +23,40 @@ const Profile = g.div({
         "contact"
         "social"
       `,
-    }
+    },
   },
-})
+});
 
 const Name = g.div({
   [mediaQueries.supportsGrid]: {
-    gridArea: "name"
-  }
-})
+    gridArea: "name",
+  },
+});
 
 const ContactData = g.div({
   textAlign: "right",
   [mediaQueries.supportsGrid]: {
-    gridArea: "contact"
+    gridArea: "contact",
   },
   // [mediaQueries.phone]: {
   //   textAlign: "initial"
   // }
-})
+});
 
 const Social = g.div({
   [mediaQueries.print]: {
-    display: "none"
+    display: "none",
   },
   [mediaQueries.supportsGrid]: {
-    gridArea: "social"
+    gridArea: "social",
   },
-  paddingBottom: "1rem"
-})
+  paddingBottom: "1rem",
+});
 
 const SocialLink = g.a({
   fontSize: "2rem",
-  padding: "0 1rem"
-})
+  padding: "0 1rem",
+});
 
 export default ({ data }) => (
   <div>
@@ -66,14 +66,24 @@ export default ({ data }) => (
         <p>{data.me.description}</p>
       </Name>
       <ContactData>
-        <p><a href={`mailto:${data.me.email}`}>{data.me.email}</a> <FontAwesome name="envelope" fixedWidth /></p>
-        <p><a href={`tel:${data.me.phone}`}>{data.me.phone}</a> <FontAwesome name="phone" fixedWidth /></p>
-        <p><a href={data.me.website}>{data.me.website}</a> <FontAwesome name="globe" fixedWidth /></p>
-        <p><a href="https://goo.gl/maps/JRFMPfXhrMM2">{data.me.address}</a> <FontAwesome name="map-marker" fixedWidth /></p>
+        <p>
+          <a href={`mailto:${data.me.email}`}>{data.me.email}</a> <FontAwesome name="envelope" fixedWidth />
+        </p>
+        <p>
+          <a href={`tel:${data.me.phone}`}>{data.me.phone}</a> <FontAwesome name="phone" fixedWidth />
+        </p>
+        <p>
+          <a href={data.me.website}>{data.me.website}</a> <FontAwesome name="globe" fixedWidth />
+        </p>
+        <p>
+          <a href="https://goo.gl/maps/LN8brDeE1Rp">{data.me.address}</a> <FontAwesome name="map-marker" fixedWidth />
+        </p>
       </ContactData>
       <Social>
         {data.me.profiles.map(p => (
-          <SocialLink href={p.url} title={p.network}><FontAwesome name={p.icon} /></SocialLink>
+          <SocialLink href={p.url} title={p.network}>
+            <FontAwesome name={p.icon} />
+          </SocialLink>
         ))}
       </Social>
     </Profile>
@@ -95,7 +105,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query IndexQuery {
-    me: contentfulPerson(name: {eq: "Jonny Stoten"}) {
+    me: contentfulPerson(name: { eq: "Jonny Stoten" }) {
       name
       description
       email
@@ -118,7 +128,7 @@ export const query = graphql`
         }
       }
     }
-    experience: allContentfulEmploymentPosition(sort: {fields: [startDate], order: DESC}) {
+    experience: allContentfulEmploymentPosition(sort: { fields: [startDate], order: DESC }) {
       edges {
         node {
           company
@@ -139,7 +149,7 @@ export const query = graphql`
         }
       }
     }
-    education: allContentfulQualification(sort: {fields: [startDate], order: DESC}) {
+    education: allContentfulQualification(sort: { fields: [startDate], order: DESC }) {
       edges {
         node {
           level
@@ -150,7 +160,7 @@ export const query = graphql`
         }
       }
     }
-    skills: contentfulSkills(contentfulid: {eq: "skills"}) {
+    skills: contentfulSkills(contentfulid: { eq: "skills" }) {
       languages
       frameworks
       operations
@@ -162,4 +172,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
