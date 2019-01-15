@@ -1,3 +1,3 @@
-import g from "glamorous"
+import g from "glamorous";
 
-export const PrintPageBreak = g.div({ pageBreakAfter: "always" })
+export const PrintPageBreak = g.div({ pageBreakAfter: "always" });

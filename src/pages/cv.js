@@ -8,7 +8,6 @@ import { Education } from "../components/education";
 import { Skills } from "../components/skills";
 import { mediaQueries } from "../utils/media-queries";
 import { PrintOnly } from "../utils/print-only";
-import { PrintPageBreak } from "../utils/print-page-break";
 
 const Profile = g.div({
   [mediaQueries.supportsGrid]: {
@@ -92,7 +91,6 @@ export default ({ data }) => (
     <hr />
     <Experience data={data.experience} />
     <hr />
-    <PrintPageBreak />
     <Skills data={data.skills} />
     <hr />
     <Education data={data.education} />
