@@ -24,7 +24,6 @@ export const Experience = ({ data }) => (
             <MarkdownHtml markdown={node.projects} />
           </div>
         )}
-        {index === 0 && <PrintPageBreak />}
       </div>
     ))}
   </div>
